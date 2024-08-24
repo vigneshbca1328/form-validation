@@ -1,0 +1,73 @@
+body {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(121, 32, 153, 1) 86%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#form {
+    width: 400px;
+    margin: 5vh auto 0 auto;
+    /*left right bottom down */
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #792099;
+}
+
+#form button {
+    background-color: #792099;
+    color: white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    /* dflex is used to call flex-direction,flex direction col - its comes in a single col - one by one */
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid rgb(34, 193, 195);
+}
+
+.input-group input:focus {
+    outline: 0;
+}
+
+.input-group .error {
+    /* just changing the error color to red however we are going to add this error message in js only */
+    color: rgb(242, 18, 18);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* <div class="input-group success error"></div> can add the success and error
+class now itself because the form has to be validate according to the information given
+by the user */
+
+.input-group .success input {
+    /* we are going to add success class from js to check whether the validation is T or F ,
+    if T the input box will be in green color if F the input box will be in red color */
+    border-color: #0cc477;
+}
+
+.input-group.error input {
+    border-color: rgb(206, 67, 67);
+}
